@@ -1,0 +1,96 @@
+---
+title: Strust2开发实践
+tags:
+  - Struts2
+  - Java开发框架
+categories:
+  - Java
+  - Struts2
+keywords: 'Blog,Java,Web,前端,后端,Python,PHP,开发者,程序员,javascript,Html,maven,gitHub,学习分享,编程'
+date: 2017-06-08 15:44:13
+description: Struts2的学习以及开发实践
+---
+> 一步一步学会Struts2的使用,并深入了解Struts2的原理
+<!-- more -->
+
+## Struts2简介
+### Struts2
+>轻量级的MVC框架,主要解决了请求分发的问题,重心在控制层和表现层
+- 轻量级 :低侵入性,与业务代码的耦合性很低.即 :业务代码中基本不需要import它的包
+- MVC框架 :Struts2实现了MVC,并提供一系列API,采用模式化方式简化业务开发过程
+
+### 对比Servlet
+
+#### 优点
+>  
+1. 业务代码解耦,适合团队开发,将请求发给不同的处理类,从而降低了业务代码的耦合程度
+2. 提升开发效率,提供了一系列API,大大提升项目的开发效率。如 :使用拦截器自动给请求参数转型
+
+#### 缺点
+> 执行效率偏低,需要使用反射、解析XML等技术手段，会降低执行效率
+
+## Struts2开发实践
+
+### 需要的基本lib包
+![](http://or5qwkb5l.bkt.clouddn.com/struts_libs.png)
+
+### 具体开发流程
+ ![](http://or5qwkb5l.bkt.clouddn.com/struts2_request.jpg )
+
+#### 在web.xml中配置前端控制器
+```
+<!-- Struts2前端控制器 -->
+<filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.filter.StrutsPrepareAndExecuteFilter</filter-class>
+</filter>
+<filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>/*</url-pattern>
+</filter-mapping>
+```
+
+#### 创建struts.xml
+> - 必须放置于src文件夹下,且名称必须为:struts.xml
+- 在struts.cml中配置请求与Action的关系
+- 在action中通过result设置转发的页面
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <!-- package :包,用于对Action进行封装.
+        1. name :包名,根元素下可以有多个包,彼此之间不能重名
+        2. extend :继承,用于指定继承的包,相当于将该继承包下的配置信息复制到了当前包下
+        3. namespace :命名空间,用于规定Action的访问路径,必须以"/"开头,可以限定接收action的请求地址
+    -->
+    <package name="struts2Demo" namespace="/struts2Demo" extends="struts-default">
+        <!-- action :业务控制器.用于注册业务控制器组件(类)
+            1. name :action名臣,用于规定Action的访问路径,一个包下可以有多个Action,彼此之间不能重名
+            2. class :业务控制器组件,指定业务控制器对应的类
+            3. method :方法,用于指定访问当前action时要调用的方法
+            4. 请求url :http://IP:PORT/ProjectName/NAMESPACE/ACTIONNAME.action
+        -->
+        <action name="hello" class="com.study.struts2Demo.action.HelloAction" method="hello">
+            <!-- result :输出组件,用于转发重定向,直接输出
+                1. name :名臣一个action下可以有多个result,彼此之间不能重名
+                2. 默认做转发,元素内设置转发的页面
+            -->
+            <result name="success">
+                /pages/hello.jsp
+            </result>
+        </action>
+    </package>
+</struts>
+```
+
+#### 编写业务控制器Action
+> - 创建业务控制器组件,命名规则:XxxAction,该组件满足是一个JavaBean的规范类
+ - 方法是public
+ - 返回值是String
+ - 参数列表为空
+ - 编写业务方法
+   - 返回的字符串与struts.xml-->action-->result的name属性匹配,即 :根据此返回值可以找到对应的result
+
+#### 编写Jsp页面
