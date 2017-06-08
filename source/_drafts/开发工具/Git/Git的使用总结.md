@@ -1,9 +1,12 @@
 ---
 title: Git的使用总结
-categories: [skills]
+categories: 
+- 开发工具
+- Git
 keywords: 'Blog,Git'
 date: 2017-06-07 15:56:16
-tags: [Git]
+tags: 
+- Git
 description: 在使用Git的过程中的一些总结
 ---
 >- 在使用Git的过程中的一些总结,不具体说明,一点点记录在使用过程中遇到的

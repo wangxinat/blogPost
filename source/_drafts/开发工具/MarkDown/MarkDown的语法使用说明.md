@@ -1,9 +1,13 @@
 ---
 title: MarkDown的语法使用说明
-categories: [skills]
+categories: 
+- 开发工具
+- MarkDown
 keywords: 'Blog,txtEdit'
 date: 2017-06-07 15:32:29
-tags: [txtEdit]
+tags: 
+- MarkDown
+- 文本编辑
 description: 记录MarkDown在使用过程中常用的语法
 ---
 记录MarkDown在使用过程中常用的语法

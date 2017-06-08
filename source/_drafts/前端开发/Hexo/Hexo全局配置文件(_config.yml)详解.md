@@ -1,8 +1,12 @@
 ---
 title: Hexo全局配置文件(_config.yml)详解
 date: 2017-06-06 11:20:59
-tags: [Hexo,Blog]
-categories: [skills]
+tags: 
+- Hexo
+- Blog
+categories: 
+- 前端开发
+- Hexo
 ---
 ## _config.yml :全局配置说明
 <!-- more -->

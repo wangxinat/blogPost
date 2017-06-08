@@ -1,9 +1,12 @@
 ---
 title: Hexo帮助文档-官翻
 date: 2017-06-06 15:12:34
-tags: [Hexo,Blog]
-categories: [skills]
-comments: true
+tags: 
+- Hexo
+- Blog
+categories: 
+- 前端开发
+- Hexo
 keywords: Hexo, Blog
 description: 记录Hexo的学习以及使用中的问题
 ---

@@ -1,8 +1,12 @@
 ---
 title: Hexo中主题配置文件(_config.yml)详解
 date: 2017-06-06 13:31:30
-tags: [Hexo,Blog]
-categories: [skills]
+tags: 
+- Hexo
+- Blog
+categories: 
+- 前端开发
+- Hexo
 ---
 # 主题相关配置说明 :以indigo主题为例
 <!-- more -->

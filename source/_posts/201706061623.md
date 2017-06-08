@@ -1,7 +1,11 @@
 ---
 title: Hexo中遇到的问题及解决
-tags: [Hexo,Blog]
-categories: [skills]
+tags: 
+- Hexo
+- Blog
+categories: 
+- 前端开发
+- Hexo
 comments: true
 keywords: 'Blog,Hexo'
 date: 2017-06-06 16:23:14
