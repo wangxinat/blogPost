@@ -91,5 +91,5 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:wangxinat/wangxinat.github.io.git
+  repository: git@github.com:vanxinBlog/vanxinBlog.github.io.git
   branch: master
