@@ -1,0 +1,154 @@
+---
+title: Hexo中主题配置文件(_config.yml)详解
+date: 2017-06-06 13:31:30
+tags: [Hexo,Blog]
+categories: [skills]
+---
+# 主题相关配置说明 :以indigo主题为例
+<!-- more -->
+>- 供参考,有时间再修改
+
+```
+menu:
+  home:
+    text: 主页
+    url: /
+  archives:
+    text: 归档
+    url: /archives
+  tags:
+    text: 标签
+    url: /tags
+  th-list:
+    text: 分类
+    url: /categories
+  github:
+    url: https://github.com/wangxinat
+    target: _blank
+  weibo:
+    text: 微博
+    url: http://www.weibo.com/wangxinat
+    target: _blank
+  link:
+    text: other
+    url: /custom
+
+# 你的头像url
+avatar: /img/avatar.jpg
+# avatar link 点击头像链接
+avatar_link: /
+# 头像背景图
+brand: /img/brand.jpg
+# favicon
+favicon: /img/favicon.ico
+
+# email
+email: wangxinat163@163.com
+
+# 设置 Android L Chrome 浏览器状态栏颜色
+color: '#3F51B5'
+
+# 页面标题
+tags_title: Tags
+archives_title: Archives
+categories_title: Categories
+
+# 文章截断
+excerpt_render: false
+excerpt_length: 200
+excerpt_link: 阅读全文...
+mathjax: false
+archive_yearly: true
+
+# 是否显示文章最后更新时间
+show_last_updated: true
+
+# 是否开启分享
+share: true
+
+# 是否开启打赏，关闭 reward: false
+reward:
+  title: 感谢打赏~
+  wechat: /img/wechat.jpg     #微信，关闭设为 false
+  alipay: /img/alipay.jpg     #支付宝，关闭设为 false
+
+# 是否开启搜索
+search: true
+
+# 是否大屏幕下文章页隐藏导航
+hideMenu: true
+
+# 是否开启toc
+# toc: false
+toc:
+  list_number: true  # 是否显示数字排序
+
+# 文章页留言内容，hexo中所有变量及辅助函数等均可调用，具体请查阅 hexo.io
+postMessage: <a href="<%- url_for(page.path).replace(/index\.html$/, '') %>" target="_self" rel="external"><%- page.permalink.replace(/index\.html$/, '') %>待开发</a>
+
+# 站长统计，如要开启，输入CNZZ站点id，如 cnzz: 1255152447
+cnzz: false
+
+# 百度统计，如要开启，改为你的 key
+baidu_tongji: false
+
+# 腾讯分析，如要开启，输入站点id
+tajs: false
+
+# google
+google_analytics: false
+google_site_verification: false
+
+# less
+less:
+  compress: true
+  paths:
+    - source/css/style.less
+
+# 以下评论插件开启一个即可
+# 是否开启多说评论，填写你在多说创建的站点二级域名
+duoshuo: false
+# 是否开启多说评论计数（该服务不稳定）
+duoshuo_count: false
+# 使用 disqus 时关闭多说评论
+disqus_shortname: false
+# 是否开启友言评论, 填写友言用户id
+uyan_uid: 2135775
+# 是否开启网易云跟帖， 填写app sdk中的app key
+wangyi_ygt: false
+# 是否使用 gitment，https://github.com/imsun/gitment
+gitment: false
+# gitment:
+#   owner:
+#   repo:
+#   client_id:
+#   client_secret:
+
+# 规范网址
+# 让搜索引擎重定向你的不同域名、不同子域、同域不同目录的站点到你期望的路径
+# https://support.google.com/webmasters/answer/139066
+# 假设配置为 canonical: http://imys.net，那么从搜索引擎中 www.imys.net 进入会重定向到 imys.net
+canonical: false
+
+# 版权起始年份
+since_year: 2017
+
+# 用户页面中作者相关的描述性文字，如不需要设为 false
+about: 用户页面中作者相关的描述性文字，如不需要设为 false
+
+# “不蒜子”访问量统计，详见 http://ibruce.info/2015/04/04/busuanzi/
+visit_counter:
+  site_uv: 站点总访客数：
+  site_pv: 站点总访问量：
+
+# 动态定义title
+title_change:
+  normal: (つェ⊂)HaHa!真棒!
+  leave: Welcome Come Here
+
+# 设置为 true 发布后将使用 unpkg cdn
+cdn: true
+
+# 设置为 true 将使用 lightbox render 图片
+lightbox: true
+```
