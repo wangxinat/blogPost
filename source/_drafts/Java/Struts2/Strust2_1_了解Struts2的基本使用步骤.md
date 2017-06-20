@@ -1,5 +1,5 @@
 ---
-title: Strust2开发实践
+title: Strust2开发实践_1
 tags:
   - Struts2
   - Java开发框架
@@ -10,7 +10,7 @@ keywords: 'Blog,Java,Web,前端,后端,Python,PHP,开发者,程序员,javascript
 date: 2017-06-08 15:44:13
 description: Struts2的学习以及开发实践
 ---
-> 一步一步学会Struts2的使用,并深入了解Struts2的原理
+> 了解Struts2的原理以及开发流程
 <!-- more -->
 
 ## Struts2简介
@@ -33,6 +33,7 @@ description: Struts2的学习以及开发实践
 
 ### 需要的基本lib包
 ![](http://or5qwkb5l.bkt.clouddn.com/struts_libs.png)
+![struts2_2.4](http://or5qwkb5l.bkt.clouddn.com/struts2_2.4_libs.png)
 
 ### 具体开发流程
  ![](http://or5qwkb5l.bkt.clouddn.com/struts2_request.jpg )
